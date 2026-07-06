@@ -1,28 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dharnel Baculo | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dharnel Baculo | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+overflow-y:scroll;
+scroll-snap-type:y mandatory;
+}
+
+section{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:30px;
+scroll-snap-align:start;
+color:white;
+animation:fade 1s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero{
+background:linear-gradient(135deg,#0f172a,#2563eb);
+}
+
+.about{
+background:linear-gradient(135deg,#0f766e,#0f172a);
+}
+
+.projects{
+background:linear-gradient(135deg,#312e81,#111827);
+}
+
+.contact{
+background:linear-gradient(135deg,#7c2d12,#111827);
+}
+
+img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
+box-shadow:0 0 30px rgba(255,255,255,.4);
+margin-bottom:25px;
+transition:.5s;
+}
+
+img:hover{
+transform:scale(1.08);
+}
+
+h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+p{
+max-width:700px;
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.card{
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.arrow{
+
+position:absolute;
+bottom:25px;
+font-size:40px;
+text-decoration:none;
+color:white;
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+0%,20%,50%,80%,100%{
+transform:translateY(0);
+}
+
+40%{
+transform:translateY(-15px);
+}
+
+60%{
+transform:translateY(-8px);
+}
+}
+
+</style>
+
 </head>
 <body>
-  <h1>Hi, I'm Dharnel Baculo 👋</h1>
-  <img src="profile.jpg" alt="Dharnel Baculo" width="200">
-  <p>IT Student | Aspiring UI/UX & Graphic Designer</p>
 
-  <h2>About Me</h2>
-  <p>
-    Welcome to my portfolio! I'm passionate about graphic design,
-    UI/UX, and creating meaningful technology solutions.
-  </p>
+<section class="hero">
 
-  <h2>Projects</h2>
-  <ul>
-    <li>AI-Based Real-Time Filipino Sign Language Recognition and Translation System</li>
-  </ul>
+<img src="profile.jpg">
 
-  <h2>Contact</h2>
-  <p>Email: youremail@example.com</p>
+<h1>Hi, I'm<br>Dharnel Baculo 👋</h1>
+
+<p>IT Student • Aspiring UI/UX Designer • Graphic Designer</p>
+
+<a href="#about" class="arrow">⌄</a>
+
+</section>
+
+<section class="about" id="about">
+
+<h2>About Me</h2>
+
+<div class="card">
+
+<p>
+
+Welcome to my portfolio! I am passionate about creating modern digital experiences through UI/UX Design, Graphic Design, and Web Development. I love learning new technologies and building projects that solve real-world problems.
+
+</p>
+
+</div>
+
+<a href="#projects" class="arrow">⌄</a>
+
+</section>
+
+<section class="projects" id="projects">
+
+<h2>Projects</h2>
+
+<div class="card">
+
+<h3>AI-Based Real-Time Filipino Sign Language Recognition and Translation System</h3>
+
+<p>
+A capstone project that uses Artificial Intelligence and Context-Aware Natural Language Processing to recognize and translate Filipino Sign Language in real time.
+</p>
+
+</div>
+
+<a href="#contact" class="arrow">⌄</a>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Me</h2>
+
+<div class="card">
+
+<p>📧 youremail@example.com</p>
+
+<p>📱 09XXXXXXXXX</p>
+
+<p>📍 Philippines</p>
+
+</div>
+
+</section>
+
 </body>
 </html>
-
